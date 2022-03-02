@@ -69,3 +69,6 @@ mod url;
 #[cfg(feature = "uuid")]
 mod uuid;
 mod wrapper;
+
+#[cfg(feature = "ndarray")]
+mod ndarray;
