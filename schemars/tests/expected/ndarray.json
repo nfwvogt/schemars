@@ -1,0 +1,187 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "TestStruct",
+    "type": "object",
+    "required": [
+      "four",
+      "one",
+      "three",
+      "two",
+      "zero"
+    ],
+    "properties": {
+      "four": {
+        "$ref": "#/definitions/Array_of_type_int32_Dimension_of_type_Array_size_4_of_uint"
+      },
+      "one": {
+        "$ref": "#/definitions/Array_of_type_double_Dimension_of_type_Array_size_1_of_uint"
+      },
+      "three": {
+        "$ref": "#/definitions/Array_of_type_uint64_Dimension_of_type_Array_size_3_of_uint"
+      },
+      "two": {
+        "$ref": "#/definitions/Array_of_type_uint32_Dimension_of_type_Array_size_2_of_uint"
+      },
+      "zero": {
+        "$ref": "#/definitions/Array_of_type_float_Dimension_of_type_EmptyArray"
+      }
+    },
+    "definitions": {
+      "Array_of_type_double_Dimension_of_type_Array_size_1_of_uint": {
+        "type": "object",
+        "required": [
+          "data",
+          "dim",
+          "v"
+        ],
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "format": "double"
+            }
+          },
+          "dim": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "uint",
+              "minimum": 0.0
+            },
+            "maxItems": 1,
+            "minItems": 1
+          },
+          "v": {
+            "type": "integer",
+            "format": "uint8",
+            "minimum": 0.0
+          }
+        }
+      },
+      "Array_of_type_float_Dimension_of_type_EmptyArray": {
+        "type": "object",
+        "required": [
+          "data",
+          "dim",
+          "v"
+        ],
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "number",
+              "format": "float"
+            }
+          },
+          "dim": {
+            "type": "array",
+            "maxItems": 0
+          },
+          "v": {
+            "type": "integer",
+            "format": "uint8",
+            "minimum": 0.0
+          }
+        }
+      },
+      "Array_of_type_int32_Dimension_of_type_Array_size_4_of_uint": {
+        "type": "object",
+        "required": [
+          "data",
+          "dim",
+          "v"
+        ],
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "int32"
+            }
+          },
+          "dim": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "uint",
+              "minimum": 0.0
+            },
+            "maxItems": 4,
+            "minItems": 4
+          },
+          "v": {
+            "type": "integer",
+            "format": "uint8",
+            "minimum": 0.0
+          }
+        }
+      },
+      "Array_of_type_uint32_Dimension_of_type_Array_size_2_of_uint": {
+        "type": "object",
+        "required": [
+          "data",
+          "dim",
+          "v"
+        ],
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "uint32",
+              "minimum": 0.0
+            }
+          },
+          "dim": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "uint",
+              "minimum": 0.0
+            },
+            "maxItems": 2,
+            "minItems": 2
+          },
+          "v": {
+            "type": "integer",
+            "format": "uint8",
+            "minimum": 0.0
+          }
+        }
+      },
+      "Array_of_type_uint64_Dimension_of_type_Array_size_3_of_uint": {
+        "type": "object",
+        "required": [
+          "data",
+          "dim",
+          "v"
+        ],
+        "properties": {
+          "data": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "uint64",
+              "minimum": 0.0
+            }
+          },
+          "dim": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "format": "uint",
+              "minimum": 0.0
+            },
+            "maxItems": 3,
+            "minItems": 3
+          },
+          "v": {
+            "type": "integer",
+            "format": "uint8",
+            "minimum": 0.0
+          }
+        }
+      }
+    }
+  }

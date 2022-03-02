@@ -72,3 +72,5 @@ mod wrapper;
 
 #[cfg(feature = "num-complex")]
 mod num_complex;
+#[cfg(feature = "ndarray")]
+mod ndarray;
