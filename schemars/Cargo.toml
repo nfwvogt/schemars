@@ -98,14 +98,13 @@ name = "enumset"
 required-features = ["enumset"]
 
 [[test]]
-<<<<<<< HEAD
 name = "num-complex"
 required-features = ["num-complex"]
-=======
+
+[[test]]
 name = "ndarray"
 required-features = ["ndarray"]
 
->>>>>>> add_schema_support_ndarray
 
 [package.metadata.docs.rs]
 all-features = true
